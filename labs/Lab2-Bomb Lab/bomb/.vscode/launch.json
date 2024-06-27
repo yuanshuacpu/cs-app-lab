@@ -1,0 +1,43 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) linux",
+            "type": "cppdbg",
+            "request": "launch",
+            // "preLaunchTask": "qemu",
+            "program": "${workspaceFolder}/bomb",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerArgs": "-n ",
+            "targetArchitecture": "x64",
+            "setupCommands": [
+                
+                {
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                // {
+                //     "text": "watch *0x7c00",
+                //      "ignoreFailures": true
+                // },
+                // {
+                //     "text": "break *0x7c00",
+                //     "ignoreFailures": true
+                // }
+                // {
+                //     "description": "Enable disassembly view",
+                //     "text": "set disassembly-flavor intel",
+                //     "ignoreFailures": true
+                // }
+            ]
+        }
+    ]
+}
